@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const cookieparser=require('cookie-parser')
+const dbgr=require('debug')("development:App.js")
 const path=require('path');
 const db=require('./config/mongoose-connection')
 const ownersrouter=require("./routes/ownersrouter")
@@ -16,5 +17,5 @@ app.use("/owners",ownersrouter)
 app.use("/users",usersrouter)
 app.use("/products",productsrouter)
 app.listen(port, () => {
-console.log(`Example app listening on port `)
+  dbgr('started')
 })

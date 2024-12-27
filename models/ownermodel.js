@@ -5,7 +5,7 @@ const ownerschema=mongoose.Schema({
         trim:true
     },
     password:String,
-    gmail:gmail,
+    gmail:String,
     products:{
         type:Array,
         default:[]
