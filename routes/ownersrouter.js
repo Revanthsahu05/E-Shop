@@ -5,6 +5,7 @@ router.get("/",  (req, res) => {
  res.send("hey its working");
 });
 if (process.env.NODE_ENV === "development") {
+  console.log("yes")
     //only available in development phase
     router.post("/create", async (req, res) => {
       let {fullname,password,email}=req.body
@@ -20,4 +21,8 @@ let createduser=await ownermodel.create({
   res.status(201).send(createduser);
   });
 }
+router.get("/admin",(req,res)=>{
+  let success=req.flash('success');
+  res.render("createproducts",{success});
+})
 module.exports = router;

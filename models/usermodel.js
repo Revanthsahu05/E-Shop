@@ -5,12 +5,11 @@ const userschema=mongoose.Schema({
         trim:true
     },
     password:String,
-    gmail:gmail,
+    email:String,
     cart:{
         type:Array,
         default:[]
     },
-    isadmin:Boolean,
     orders:{
         type:Array,
         default:[]
