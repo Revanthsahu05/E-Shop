@@ -6,7 +6,7 @@ module.exports=async (req,res,next)=>{
     return res.redirect("/")
  }
  try{
-    let decoded=jwt.verify(req.cookies.token,process.env.SECRET_KEY)
+    let decoded = jwt.verify(req.cookies.token, process.env.SECRET_KEY);
     let user=await usermodel.findOne({email:decoded.email}).select("-password")
     req.user=user;
     next()
