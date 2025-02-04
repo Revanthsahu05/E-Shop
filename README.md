@@ -46,11 +46,19 @@ E-Shop is a feature-rich, full-stack e-commerce application built using **Node.j
 ## 📂 Directory Structure
 revanthsahu05-e-shop/
 ├── App.js # Entry point of the application
+
 ├── config/ # Configuration files (e.g., MongoDB connection)
+
 ├── controllers/ # Business logic (e.g., authentication)
+
 ├── middlewares/ # Custom middleware (e.g., authentication checks)
+
 ├── models/ # Database schemas (e.g., users, products)
+
 ├── public/ # Static assets (e.g., images, stylesheets)
+
 ├── routes/ # API routes
+
 ├── utils/ # Utility functions (e.g., token generation)
+
 └── views/ # EJS templates for frontend
